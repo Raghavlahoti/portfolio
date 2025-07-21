@@ -7,7 +7,7 @@ import ReachOutDrawer from '../Landing Page/ReachOutDrawer';
 import WorkShowcase from '../Landing Page/WorkShowcase';
 import LocomotiveScroll from 'locomotive-scroll';
 import 'locomotive-scroll/dist/locomotive-scroll.css';
-import porfolioimg from '../../assets/images/portfolioimg.png'; // Adjust the path as necessary
+import porfolioimg from '../../assets/images/portfolio.png'; // Adjust the path as necessary
 import video700 from '../../assets/images/700.mp4'; // Adjust the path as necessary
 const projectsData = [
     // Web Projects
