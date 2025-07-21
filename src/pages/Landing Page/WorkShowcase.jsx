@@ -5,7 +5,7 @@ import 'swiper/css/navigation';
 import { Autoplay, EffectFade, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import porfolioimg from '../../assets/portfolio.png'; // Adjust the path as necessary
-import aiAssistantImg from '../../assets/Ai Assistant.png'; // Assuming you have an image for this project
+import aiAssistantImg from '../../assets/ai-assistant.png'; // Assuming you have an image for this project
 const WorkShowcase = () => {
     const navigate = useNavigate();
     const webProjects = [
