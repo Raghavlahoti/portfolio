@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 import Footer from '../Landing Page/Footer';
 import Navbar from '../Landing Page/Navbar';
 import ReachOutDrawer from '../Landing Page/ReachOutDrawer';
-import porfolioimg from '../../assets/portfolioimg.png'; // Adjust the path as necessary
-import aiAssistantImg from '../../assets/aiAssistant.png'; // Assuming you have an image for this project
+import porfolioimg from '../../assets/portfolio.png'; // Adjust the path as necessary
+import aiAssistantImg from '../../assets/Ai Assistant.png'; // Assuming you have an image for this project
 import video400 from '../../assets/400.mp4'; // Adjust the path as necessary
 const webProjects = [
         {
