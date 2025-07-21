@@ -15,6 +15,8 @@ import Navbar from './Navbar';
 import Overview from './Overview';
 import ReachOutDrawer from './ReachOutDrawer';
 import WorkShowcase from './WorkShowcase';
+import video500 from '../../assets/500.mp4'; // Adjust the path as necessary
+import video700 from '../../assets/700.mp4'; // Adjust the path as necessary
 
 const Content = () => {
     const navigate = useNavigate();
@@ -157,7 +159,7 @@ const Content = () => {
                                 ref={loaderVideoRef}
                                 className="w-full h-full object-cover absolute"
                             >
-                                <source src="/700.mp4" type="video/mp4" />
+                                <source src={video700} type="video/mp4" />
                             </video>
 
                             {/* Animated Name Logo */}
@@ -198,7 +200,7 @@ const Content = () => {
                             ref={heroVideoRef}
                             className="absolute top-0 left-0 w-full h-full object-cover z-0 brightness-75"
                         >
-                            <source src="/500.mp4" type="video/mp4" />
+                            <source src={video500} type="video/mp4" />
                         </video>
 
                         {/* Gradient Overlay */}

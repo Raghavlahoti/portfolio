@@ -7,14 +7,16 @@ import { Link } from 'react-router-dom';
 import Footer from '../Landing Page/Footer';
 import Navbar from '../Landing Page/Navbar';
 import ReachOutDrawer from '../Landing Page/ReachOutDrawer';
-
+import porfolioimg from '../../assets/portfolioimg.png'; // Adjust the path as necessary
+import aiAssistantImg from '../../assets/aiAssistant.png'; // Assuming you have an image for this project
+import video400 from '../../assets/400.mp4'; // Adjust the path as necessary
 const webProjects = [
         {
             id: 1,
             title: "Portfolio Website",
             description: "A personal developer portfolio showcasing skills, projects, and animations.",
             year: "2025",
-            image: "/portfolio.png",
+            image: {porfolioimg},
             link: "/work/portfolio",
             tags: ["React", "Framer Motion", "GSAP", "Responsive"]
         },
@@ -23,7 +25,7 @@ const webProjects = [
             title: "SmartEdu - AI-Powered Education",
             description: "A modern web platform that enhances learning through AI-generated content, quizzes, and dynamic study tools tailored for students.",
             year: "2025",
-            image: "/Ai Assistant.png", 
+            image: {aiAssistantImg}, // Assuming you have an image for this project
             link: "#", 
             tags: ["React", "AI", "Education", "TailwindCSS"]
         },
@@ -93,7 +95,7 @@ const Work = () => {
                     playsInline
                     className="absolute top-0 left-0 w-full h-[90vh] object-cover z-0"
                 >
-                    <source src="/400.mp4" type="video/mp4" />
+                    <source src={video400} type="video/mp4" />
                 </video>
                 <div className="absolute top-0 left-0 w-full h-screen bg-[#0A0A0A]/60 z-0"></div>
 

@@ -7,6 +7,8 @@ import ReachOutDrawer from '../Landing Page/ReachOutDrawer';
 import WorkShowcase from '../Landing Page/WorkShowcase';
 import LocomotiveScroll from 'locomotive-scroll';
 import 'locomotive-scroll/dist/locomotive-scroll.css';
+import porfolioimg from '../../assets/portfolioimg.png'; // Adjust the path as necessary
+import video700 from '../../assets/700.mp4'; // Adjust the path as necessary
 const projectsData = [
     // Web Projects
     {
@@ -56,7 +58,7 @@ const projectsData = [
         title: "Portfolio Website",
         description: "A personal developer portfolio showcasing skills, projects, and animations.",
         year: "2023",
-        image: "/portfolio.png",
+        image: {porfolioimg},
         tags: ["React", "Framer Motion", "GSAP", "Responsive"],
         type: "web",
         content: (
@@ -328,7 +330,7 @@ const WorkDetail = () => {
                                 playsInline
                                 className="w-full h-full rounded-3xl object-cover z-0 brightness-75"
                             >
-                                <source src="/700.mp4" type="video/mp4" />
+                                <source src={video700} type="video/mp4" />
                             </video>
                         </div>
                     </div>
