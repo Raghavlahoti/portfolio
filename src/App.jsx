@@ -8,15 +8,16 @@ import AdminPage from './pages/Admin/AdminPage' // <-- Add this import
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/portfolio">
       <CursorFollower />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/work" element={<Work />} />
         <Route path="/work/:id" element={<WorkDetail />} />
-        {/* <Route path="/admin" element={<AdminPage />} />  */}
+        {/* <Route path="/admin" element={<AdminPage />} /> */}
       </Routes>
     </Router>
+
   )
 }
 
