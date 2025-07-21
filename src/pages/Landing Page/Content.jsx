@@ -15,8 +15,8 @@ import Navbar from './Navbar';
 import Overview from './Overview';
 import ReachOutDrawer from './ReachOutDrawer';
 import WorkShowcase from './WorkShowcase';
-import video500 from '../../assets/500.mp4'; // Adjust the path as necessary
-import video700 from '../../assets/700.mp4'; // Adjust the path as necessary
+import video500 from '../../assets/images/500.mp4'; // Adjust the path as necessary
+import video700 from '../../assets/images/700.mp4'; // Adjust the path as necessary
 
 const Content = () => {
     const navigate = useNavigate();
