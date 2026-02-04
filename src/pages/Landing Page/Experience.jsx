@@ -35,7 +35,7 @@ const Experience = () => {
             Experience
           </h2>
           <a
-            href="/Raghav Resume 2025 June.pdf"
+            href="https://drive.google.com/file/d/1BG2SDsq2pVk8b72D7kRGE8rZbfPeGyD9/view?usp=sharing"
             download
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}

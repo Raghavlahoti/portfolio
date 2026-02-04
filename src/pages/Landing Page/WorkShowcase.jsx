@@ -4,30 +4,33 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import { Autoplay, EffectFade, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import porfolioimg from '../../assets/images/portfolio.png'; // Adjust the path as necessary
-import aiAssistantImg from '../../assets/images/ai-assistant.png'; // Assuming you have an image for this project
+
+import img1 from "../../assets/images/portfolio.png";
+import img2 from "../../assets/images/ai_assistant.png";
+
+
 const WorkShowcase = () => {
     const navigate = useNavigate();
     const webProjects = [
-        {
-            id: 1,
-            title: "Portfolio Website",
-            description: "A personal developer portfolio showcasing skills, projects, and animations.",
-            year: "2025",
-            image: {porfolioimg},
-            link: "/work/portfolio",
-            tags: ["React", "Framer Motion", "GSAP", "Responsive"]
-        },
-        {
-            id: 2,
-            title: "SmartEdu - AI-Powered Education",
-            description: "A modern web platform that enhances learning through AI-generated content, quizzes, and dynamic study tools tailored for students.",
-            year: "2025",
-            image: {aiAssistantImg}, // Assuming you have an image for this project
-            link: "#", 
-            tags: ["React", "AI", "Education", "TailwindCSS"]
-        },
-    ];
+    {
+        id: 1,
+        title: "Portfolio Website",
+        description: "A personal developer portfolio showcasing skills, projects, and animations.",
+        year: "2025",
+        image: img1,  // ✅ now correct
+        link: "/work/portfolio",
+        tags: ["React", "Framer Motion", "GSAP", "Responsive"]
+    },
+    {
+        id: 2,
+        title: "SmartEdu - AI-Powered Education",
+        description: "A modern web platform that enhances learning through AI-generated content, quizzes, and dynamic study tools tailored for students.",
+        year: "2025",
+        image: img2, // ✅ fixed space & casing
+        link: "/work/ai_assistant", // Updated link to match the project ID
+        tags: ["React", "AI", "Education", "TailwindCSS"]
+    },
+];
 
     return (
         <section className="relative w-full flex flex-col items-center justify-center">

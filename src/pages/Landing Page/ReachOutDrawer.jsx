@@ -1,4 +1,4 @@
-import emailjs from 'emailjs-com';
+import emailjs from "@emailjs/browser";
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { IoCloseOutline } from "react-icons/io5";

@@ -7,16 +7,18 @@ import { Link } from 'react-router-dom';
 import Footer from '../Landing Page/Footer';
 import Navbar from '../Landing Page/Navbar';
 import ReachOutDrawer from '../Landing Page/ReachOutDrawer';
-import porfolioimg from '../../assets/images/portfolio.png'; // Adjust the path as necessary
-import aiAssistantImg from '../../assets/images/ai-assistant.png'; // Assuming you have an image for this project
-import video400 from '../../assets/images/400.mp4'; // Adjust the path as necessary
+
+import img1 from "../../assets/images/portfolio.png";
+import img2 from "../../assets/images/ai_assistant.png";
+import video400 from "../../assets/images/400.mp4";
+
 const webProjects = [
         {
             id: 1,
             title: "Portfolio Website",
             description: "A personal developer portfolio showcasing skills, projects, and animations.",
             year: "2025",
-            image: {porfolioimg},
+            image: img1,
             link: "/work/portfolio",
             tags: ["React", "Framer Motion", "GSAP", "Responsive"]
         },
@@ -25,7 +27,7 @@ const webProjects = [
             title: "SmartEdu - AI-Powered Education",
             description: "A modern web platform that enhances learning through AI-generated content, quizzes, and dynamic study tools tailored for students.",
             year: "2025",
-            image: {aiAssistantImg}, // Assuming you have an image for this project
+            image: img2, // fixed space & casing
             link: "#", 
             tags: ["React", "AI", "Education", "TailwindCSS"]
         },

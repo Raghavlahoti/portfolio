@@ -7,58 +7,19 @@ import ReachOutDrawer from '../Landing Page/ReachOutDrawer';
 import WorkShowcase from '../Landing Page/WorkShowcase';
 import LocomotiveScroll from 'locomotive-scroll';
 import 'locomotive-scroll/dist/locomotive-scroll.css';
-import porfolioimg from '../../assets/images/portfolio.png'; // Adjust the path as necessary
-import video700 from '../../assets/images/700.mp4'; // Adjust the path as necessary
+
+import img1 from "../../assets/images/portfolio.png";
+import img2 from "../../assets/images/ai_assistant.png";
+import video700 from "../../assets/images/700.mp4"; // ✅ fixed casing
 const projectsData = [
     // Web Projects
-    {
-        id: "corvaya",
-        title: "Corvaya",
-        description: "A CLI-based personal finance manager developed in C with search and backup features.",
-        year: "2022",
-        image: "/corvaya.png",
-        tags: ["C Language", "CLI", "File Handling"],
-        type: "web",
-        content: (
-            <>
-                <p>
-                    <b>About:</b> Corvaya is a command-line tool for managing personal finances, supporting expense tracking, data search, and backup.
-                </p>
-                <ul className="list-disc ml-6 mt-4 text-[#9D9D9D]">
-                    <li>Written in C using file handling techniques</li>
-                    <li>Simple CLI with easy-to-use commands</li>
-                    <li>Backup and restore capabilities</li>
-                </ul>
-            </>
-        )
-    },
-    {
-        id: "local-hunagama",
-        title: "Local Hunagama",
-        description: "A local marketplace CLI simulation tool built in C for managing buyers and sellers.",
-        year: "2022",
-        image: "/localhumagama.png",
-        tags: ["C Language", "Console App", "Market Simulation"],
-        type: "web",
-        content: (
-            <>
-                <p>
-                    <b>About:</b> Local Hunagama simulates a basic marketplace environment using CLI, allowing buying and selling interactions between users.
-                </p>
-                <ul className="list-disc ml-6 mt-4 text-[#9D9D9D]">
-                    <li>Console-based user experience</li>
-                    <li>CRUD operations for buyers and sellers</li>
-                    <li>File storage for persistent data</li>
-                </ul>
-            </>
-        )
-    },
+    
     {
         id: "portfolio",
         title: "Portfolio Website",
         description: "A personal developer portfolio showcasing skills, projects, and animations.",
-        year: "2023",
-        image: {porfolioimg},
+        year: "2025",
+        image: img1,
         tags: ["React", "Framer Motion", "GSAP", "Responsive"],
         type: "web",
         content: (
@@ -75,135 +36,26 @@ const projectsData = [
         )
     },
     {
-        id: "micumplemagico",
-        title: "micumplemagico",
-        description: "An event-themed website designed for magical birthday celebration experiences.",
-        year: "2023",
-        image: "/magic_cumple.png",
-        tags: ["React", "Design", "Event Website"],
-        type: "web",
-        content: (
-            <>
-                <p>
-                    <b>About:</b> A vibrant, fun website to promote magical birthday experiences for children and families.
-                </p>
-                <ul className="list-disc ml-6 mt-4 text-[#9D9D9D]">
-                    <li>Whimsical and interactive design</li>
-                    <li>Built with React and styled components</li>
-                    <li>Optimized for event showcasing</li>
-                </ul>
-            </>
-        )
-    },
-
-    {
-        id: "exclusive-ecommerce",
-        title: "Exclusive (E-Commerce)",
-        description: "An interactive and responsive e-commerce website for showcasing products.",
-        year: "2024",
-        image: "/Ecom.png",
-        tags: ["Tailwind CSS", "Frontend", "E-commerce"],
-        type: "web",
-        content: (
-            <>
-                <p>
-                    <b>About:</b> A stylish e-commerce site for product browsing and shopping experience with a modern UI.
-                </p>
-                <ul className="list-disc ml-6 mt-4 text-[#9D9D9D]">
-                    <li>Responsive layout using Tailwind CSS</li>
-                    <li>Homepage, product detail, and cart features</li>
-                    <li>Optimized for performance and SEO</li>
-                </ul>
-            </>
-        )
-    },
-
-    // ML Projects
-    {
-        id: "facial-attendance",
-        title: "Facial Recognition Attendance System",
-        description: "An interactive and responsive attendance system using facial recognition.",
+        id: "ai_assistant",
+        title: "SmartEdu - AI-Powered Education",
+        description: "A modern web platform that enhances learning through AI-generated content, quizzes, and dynamic study tools tailored for students.",
         year: "2025",
-        image: "/Ecom.png",
-        tags: ["Python", "OpenCV", "Face Recognition", "Tkinter"],
-        type: "ai",
-        content: (
-            <>
-                <p>
-                    <b>About:</b> This project uses facial recognition technology to automate student attendance marking, enhancing accuracy and saving time.
-                </p>
-                <ul className="list-disc ml-6 mt-4 text-[#9D9D9D]">
-                    <li>Implemented using Python, OpenCV, and face-recognition libraries</li>
-                    <li>GUI built with Tkinter for easy user interaction</li>
-                    <li>Attendance data stored in a CSV file for backend processing</li>
-                </ul>
-            </>
-        )
-    },
-    {
-        id: "shop-locator",
-        title: "Longitude and Latitude Detection & Shop Locator",
-        description: "A location-based web tool that helps users find shops near specific coordinates.",
-        year: "2024",
-        image: "/Ecom.png",
-        tags: ["Django", "Geolocation", "HTML/CSS", "Python"],
+        image: img2,
+        tags: ["React", "AI", "Education", "TailwindCSS"],
         type: "web",
         content: (
             <>
                 <p>
-                    <b>About:</b> This web application allows users to input geographical coordinates to discover shops in their vicinity.
+                    <b>About:</b> A cutting-edge educational platform leveraging AI to create personalized learning experiences.
                 </p>
                 <ul className="list-disc ml-6 mt-4 text-[#9D9D9D]">
-                    <li>Developed using Django and integrated Google Maps API</li>
-                    <li>Database of registered shop locations with filtering logic</li>
-                    <li>User-friendly frontend built with HTML, CSS, and basic JS</li>
+                    <li>AI-generated quizzes and content</li>
+                    <li>Dynamic study tools for enhanced learning</li>
+                    <li>Responsive design with TailwindCSS</li>
                 </ul>
             </>
         )
     },
-
-    {
-        id: "episcan",
-        title: "Cancer Detection (EpiScan)",
-        description: "Machine learning model for early cancer detection using data modeling techniques.",
-        year: "2024",
-        image: "/Skio Sio.png",
-        tags: ["Machine Learning", "Data Modeling", "Python", "AI"],
-        type: "ml",
-        content: (
-            <>
-                <p>
-                    <b>About:</b> EpiScan leverages ML to predict early-stage cancer symptoms from medical datasets with high accuracy.
-                </p>
-                <ul className="list-disc ml-6 mt-4 text-[#9D9D9D]">
-                    <li>Built using Python and scikit-learn</li>
-                    <li>Feature selection and data cleaning</li>
-                    <li>Achieved 94% prediction accuracy</li>
-                </ul>
-            </>
-        )
-    },
-    {
-        id: "medical-record",
-        title: "Medical Record System",
-        description: "A Java-based system for secure patient record management and access.",
-        year: "2023",
-        image: "/java.jpg",
-        tags: ["Java", "OOP", "File Handling"],
-        type: "ml",
-        content: (
-            <>
-                <p>
-                    <b>About:</b> A secure desktop system for managing medical records, offering audit logs and encryption features.
-                </p>
-                <ul className="list-disc ml-6 mt-4 text-[#9D9D9D]">
-                    <li>Java Swing interface</li>
-                    <li>Role-based access and file protection</li>
-                    <li>Efficient data handling and retrieval</li>
-                </ul>
-            </>
-        )
-    }
 ];
 
 const WorkDetail = () => {
