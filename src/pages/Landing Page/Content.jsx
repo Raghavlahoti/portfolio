@@ -20,7 +20,6 @@ import WorkShowcase from "./WorkShowcase";
 
 import video500 from "../../assets/images/500.mp4";
 import video700 from "../../assets/images/700.mp4";
-import profileImage from "../../assets/images/profile.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
