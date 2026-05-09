@@ -26,7 +26,7 @@ const Footer = () => {
                         </a>
                     </div>
                     <span className="text-[11px] 2xl:text-[13px] font-gr text-[#9D9D9D] text-center md:text-right">
-                        © 2025 RaghavLahoti All Rights Reserved.
+                        © 2026 Raghav Lahoti All Rights Reserved.
                     </span>
                 </div>
             </div>
