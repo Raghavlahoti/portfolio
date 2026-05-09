@@ -1,70 +1,149 @@
-import { AnimatePresence, motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const Navbar = ({ onReachOutClick, isSticky }) => {
+const Navbar = ({ onReachOutClick }) => {
     const navigate = useNavigate();
+
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useEffect(() => {
         if (isMenuOpen) {
-            document.body.classList.add('overflow-hidden');
+            document.body.classList.add("overflow-hidden");
         } else {
-            document.body.classList.remove('overflow-hidden');
+            document.body.classList.remove("overflow-hidden");
         }
-        return () => document.body.classList.remove('overflow-hidden');
+
+        return () => {
+            document.body.classList.remove("overflow-hidden");
+        };
     }, [isMenuOpen]);
 
     const menuVariants = {
-        closed: { opacity: 0, y: "-100%", transition: { duration: 0.5 } },
-        open: { opacity: 1, y: "0%", transition: { duration: 0.5 } }
+        closed: {
+            opacity: 0,
+            y: "-100%",
+            transition: { duration: 0.5 },
+        },
+        open: {
+            opacity: 1,
+            y: "0%",
+            transition: { duration: 0.5 },
+        },
     };
 
     return (
         <>
-            <header className={`w-full z-[100] flex justify-center items-center border-b border-[#222] ${isSticky ? 'fixed top-0 left-0 bg-black/60 backdrop-blur-xl shadow-md' : 'bg-transparent'}`}>
-                <nav className="flex items-center justify-between md:w-[75%] w-[90%] py-5">
-                    {/* Logo/Brand */}
+            <header
+                className="
+                fixed top-0 left-0 w-full z-[100]
+                flex justify-center items-center
+                border-b border-white/10
+                bg-black/30
+                backdrop-blur-2xl
+                shadow-[0_10px_80px_rgba(0,0,0,0.45)]
+                transition-all duration-500
+            "
+            >
+                <nav className="flex items-center justify-between w-[90%] md:w-[78%] py-5">
+
+                    {/* LOGO */}
+
                     <div
-                        className="text-2xl md:text-3xl font-gb leading-4 md:leading-5 text-white cursor-pointer tracking-tight"
-                        onClick={() => navigate('/')}
+                        onClick={() => navigate("/")}
+                        className="
+                        text-2xl md:text-3xl
+                        font-gb
+                        leading-4 md:leading-5
+                        text-white
+                        cursor-pointer
+                        tracking-tight
+                    "
                     >
-                        Raghav<span className="text-[#2FA4FF] "><br />Lahoti</span>
+                        Raghav
+                        <span className="text-[#2FA4FF]">
+                            <br />
+                            Lahoti
+                        </span>
                     </div>
-                    {/* Desktop Nav */}
-                    <div className="hidden md:flex gap-3">
+
+                    {/* DESKTOP NAV */}
+
+                    <div className="hidden md:flex items-center gap-3">
+
                         <button
-                            onClick={() => navigate('/work')}
-                            className="px-6 py-2 rounded-3xl font-gb border border-white text-white bg-transparent hover:bg-[#2FA4FF] hover:text-black transition"
+                            onClick={() => navigate("/work")}
+                            className="
+                            px-7 py-3 rounded-full
+                            font-gb border border-white/15
+                            text-white bg-white/5
+                            backdrop-blur-xl
+                            hover:bg-[#2FA4FF]
+                            hover:text-black
+                            hover:scale-105
+                            transition-all duration-500
+                        "
                         >
                             Work
                         </button>
+
                         <button
-                            onClick={() => navigate('/')}
-                            className="px-6 py-2 rounded-3xl font-gb bg-white text-black border border-white hover:bg-[#2FA4FF] hover:text-black transition"
+                            onClick={() => navigate("/")}
+                            className="
+                            px-7 py-3 rounded-full
+                            font-gb bg-white text-black
+                            border border-white/10
+                            hover:bg-[#2FA4FF]
+                            hover:scale-105
+                            transition-all duration-500
+                        "
                         >
                             Background
                         </button>
+
                         <button
                             onClick={onReachOutClick}
-                            className="px-6 py-2 rounded-3xl font-gb border border-white text-white bg-transparent hover:bg-[#2FA4FF] hover:text-black transition"
+                            className="
+                            px-7 py-3 rounded-full
+                            font-gb border border-white/15
+                            text-white bg-white/5
+                            backdrop-blur-xl
+                            hover:bg-[#2FA4FF]
+                            hover:text-black
+                            hover:scale-105
+                            transition-all duration-500
+                        "
                         >
                             Reach Out
                         </button>
                     </div>
-                    {/* Hamburger/Cross */}
+
+                    {/* MOBILE MENU BUTTON */}
+
                     <button
                         className="md:hidden flex flex-col justify-center items-center w-10 h-10 relative z-50"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        aria-label="Toggle menu"
                     >
-                        <span className={`block absolute h-0.5 w-7 bg-white rounded transition-all duration-300 ${isMenuOpen ? 'rotate-45 top-5' : 'top-3'}`}></span>
-                        <span className={`block absolute h-0.5 w-7 bg-white rounded transition-all duration-300 ${isMenuOpen ? 'opacity-0' : 'top-5'}`}></span>
-                        <span className={`block absolute h-0.5 w-7 bg-white rounded transition-all duration-300 ${isMenuOpen ? '-rotate-45 top-5' : 'top-7'}`}></span>
+                        <span
+                            className={`block absolute h-0.5 w-7 bg-white rounded transition-all duration-300 ${isMenuOpen ? "rotate-45 top-5" : "top-3"
+                                }`}
+                        ></span>
+
+                        <span
+                            className={`block absolute h-0.5 w-7 bg-white rounded transition-all duration-300 ${isMenuOpen ? "opacity-0" : "top-5"
+                                }`}
+                        ></span>
+
+                        <span
+                            className={`block absolute h-0.5 w-7 bg-white rounded transition-all duration-300 ${isMenuOpen ? "-rotate-45 top-5" : "top-7"
+                                }`}
+                        ></span>
                     </button>
                 </nav>
             </header>
-            {/* Mobile Menu */}
+
+            {/* MOBILE MENU */}
+
             <AnimatePresence>
                 {isMenuOpen && (
                     <motion.div
@@ -72,24 +151,66 @@ const Navbar = ({ onReachOutClick, isSticky }) => {
                         animate="open"
                         exit="closed"
                         variants={menuVariants}
-                        className="fixed inset-0 bg-[#0A0A0A] z-[99] md:hidden"
+                        className="
+                        fixed inset-0 z-[99]
+                        bg-[#050505]/95
+                        backdrop-blur-2xl
+                        md:hidden
+                    "
                     >
-                        <div className="flex flex-col items-center justify-center h-screen gap-0">
+                        <div className="flex flex-col items-center justify-center h-screen gap-6">
+
                             <button
-                                onClick={() => { navigate('/work'); setIsMenuOpen(false); }}
-                                className="w-[220px] border-y py-4 text-lg font-gb border-white text-white bg-transparent hover:bg-[#2FA4FF] hover:text-black transition"
+                                onClick={() => {
+                                    navigate("/work");
+                                    setIsMenuOpen(false);
+                                }}
+                                className="
+                                w-[240px]
+                                py-4 rounded-full
+                                border border-white/10
+                                bg-white/5
+                                text-white font-gb
+                                hover:bg-[#2FA4FF]
+                                hover:text-black
+                                transition-all duration-500
+                            "
                             >
                                 Work
                             </button>
+
                             <button
-                                onClick={() => { navigate('/'); setIsMenuOpen(false); }}
-                                className="w-[220px] text-lg font-gb py-5 text-white border-white hover:bg-[#2FA4FF] hover:text-black transition"
+                                onClick={() => {
+                                    navigate("/");
+                                    setIsMenuOpen(false);
+                                }}
+                                className="
+                                w-[240px]
+                                py-4 rounded-full
+                                bg-white text-black
+                                font-gb
+                                hover:bg-[#2FA4FF]
+                                transition-all duration-500
+                            "
                             >
                                 Background
                             </button>
+
                             <button
-                                onClick={() => { onReachOutClick(); setIsMenuOpen(false); }}
-                                className="w-[220px] py-4 text-lg font-gb border-y border-white text-white bg-transparent hover:bg-[#2FA4FF] hover:text-black transition"
+                                onClick={() => {
+                                    onReachOutClick();
+                                    setIsMenuOpen(false);
+                                }}
+                                className="
+                                w-[240px]
+                                py-4 rounded-full
+                                border border-white/10
+                                bg-white/5
+                                text-white font-gb
+                                hover:bg-[#2FA4FF]
+                                hover:text-black
+                                transition-all duration-500
+                            "
                             >
                                 Reach Out
                             </button>
@@ -98,7 +219,7 @@ const Navbar = ({ onReachOutClick, isSticky }) => {
                 )}
             </AnimatePresence>
         </>
-    )
-}
+    );
+};
 
-export default Navbar
+export default Navbar;
