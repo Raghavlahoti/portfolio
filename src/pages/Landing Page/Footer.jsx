@@ -20,7 +20,7 @@ const Footer = () => {
                             className="w-10 h-10 flex items-center justify-center rounded-full bg-[#181818] text-white hover:bg-[#2FA4FF] hover:text-black transition-all duration-200 shadow-md">
                             <CiLinkedin size={20} />
                         </a>
-                        <a href="https://github.com/Raghav1602" target="_blank" rel="noopener noreferrer"
+                        <a href="https://github.com/Raghavlahoti" target="_blank" rel="noopener noreferrer"
                             className="w-10 h-10 flex items-center justify-center rounded-full bg-[#181818] text-white hover:bg-[#2FA4FF] hover:text-black transition-all duration-200 shadow-md">
                             <FaGithub size={20} />
                         </a>
