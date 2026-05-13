@@ -7,30 +7,41 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import img1 from "../../assets/images/portfolio.png";
 import img2 from "../../assets/images/ai_assistant.png";
-
+import bitssImg from "../../assets/images/bitss.png";
 
 const WorkShowcase = () => {
     const navigate = useNavigate();
     const webProjects = [
-    {
-        id: 1,
-        title: "Portfolio Website",
-        description: "A personal developer portfolio showcasing skills, projects, and animations.",
-        year: "2025",
-        image: img1,  // ✅ now correct
-        link: "/work/portfolio",
-        tags: ["React", "Framer Motion", "GSAP", "Responsive"]
-    },
-    {
-        id: 2,
-        title: "SmartEdu - AI-Powered Education",
-        description: "A modern web platform that enhances learning through AI-generated content, quizzes, and dynamic study tools tailored for students.",
-        year: "2025",
-        image: img2, // ✅ fixed space & casing
-        link: "/work/ai_assistant", // Updated link to match the project ID
-        tags: ["React", "AI", "Education", "TailwindCSS"]
-    },
-];
+        {
+            id: 1,
+            title: "Portfolio Website",
+            description: "A personal developer portfolio showcasing skills, projects, and animations.",
+            year: "2025",
+            image: img1,  // ✅ now correct
+            live: "https://raghavlahoti.in",
+            link: "/work/portfolio",
+            tags: ["React", "Framer Motion", "GSAP", "Responsive"]
+        },
+        {
+            id: 2,
+            title: "SmartEdu - AI-Powered Education",
+            description: "A modern web platform that enhances learning through AI-generated content, quizzes, and dynamic study tools tailored for students.",
+            year: "2025",
+            image: img2, // ✅ fixed space & casing
+            link: "/work/ai_assistant", // Updated link to match the project ID
+            tags: ["React", "AI", "Education", "TailwindCSS"]
+        },
+        {
+            id: 3,
+            title: "Bitss Techniques Website",
+            description: "A professional company website developed during internship using WordPress and Avada Builder.",
+            year: "2024",
+            image: bitssImg,
+            live: "https://bitss.tech/",
+            link: "/work/bitss-techniques",
+            tags: ["WordPress", "Avada Builder", "Responsive", "UI/UX"]
+        },
+    ];
 
     return (
         <section className="relative w-full flex flex-col items-center justify-center">
