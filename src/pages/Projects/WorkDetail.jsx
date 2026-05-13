@@ -11,6 +11,7 @@ import 'locomotive-scroll/dist/locomotive-scroll.css';
 import img1 from "../../assets/images/portfolio.png";
 import img2 from "../../assets/images/ai_assistant.png";
 import bitssImg from "../../assets/images/bitss.png";
+import squigglesImg from "../../assets/images/squiggles.png";
 import video700 from "../../assets/images/700.mp4";
 
 const projectsData = [
@@ -83,6 +84,29 @@ const projectsData = [
                     <li>Designed service-focused UI sections</li>
                     <li>Worked with WordPress and Avada Builder</li>
                     <li>Improved branding and visual hierarchy</li>
+                </ul>
+            </>
+        )
+    },
+    {
+        id: "squiggles-library",
+        title: "Squiggles Library Management System",
+        description: "A modern library management platform designed to streamline book tracking, member management, and order operations.",
+        year: "2025",
+        image: squigglesImg,
+        tags: ["React", "TailwindCSS", "Node.js"],
+        type: "web",
+        content: (
+            <>
+                <p>
+                    <b>About:</b> Developed a comprehensive library management system focused on efficient book handling, member records, and real-time inventory management with a clean and intuitive interface.
+                </p>
+
+                <ul className="list-disc ml-6 mt-4 text-[#9D9D9D]">
+                    <li>Managed books, members, and order fulfillment</li>
+                    <li>Implemented real-time stock and availability tracking</li>
+                    <li>Designed responsive admin dashboard layouts</li>
+                    <li>Built with modern full-stack web technologies</li>
                 </ul>
             </>
         )

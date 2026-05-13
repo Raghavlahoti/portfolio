@@ -11,6 +11,7 @@ import ReachOutDrawer from '../Landing Page/ReachOutDrawer';
 import img1 from "../../assets/images/portfolio.png";
 import img2 from "../../assets/images/ai_assistant.png";
 import bitssImg from "../../assets/images/bitss.png";
+import squigglesImg from "../../assets/images/squiggles.png";
 import video400 from "../../assets/images/400.mp4";
 
 const webProjects = [
@@ -42,6 +43,16 @@ const webProjects = [
         live: "https://bitss.tech/",
         link: "/work/bitss-techniques",
         tags: ["WordPress", "Avada Builder", "Responsive", "UI/UX"]
+    },
+    {
+        id: 4,
+        title: "Squiggles Library Management System",
+        description: "A modern library management platform built to streamline book tracking, member handling, and order management operations.",
+        year: "2025",
+        image: squigglesImg,
+        live: "https://pos.worldofsquiggles.com/dashboard",
+        link: "/work/squiggles-library",
+        tags: ["React", "TailwindCSS", "Node.js"]
     },
 ];
 
