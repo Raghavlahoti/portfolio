@@ -94,6 +94,7 @@ const projectsData = [
         description: "A modern library management platform designed to streamline book tracking, member management, and order operations.",
         year: "2025",
         image: squigglesImg,
+        live: "https://pos.worldofsquiggles.com/dashboard",
         tags: ["React", "TailwindCSS", "Node.js"],
         type: "web",
         content: (
